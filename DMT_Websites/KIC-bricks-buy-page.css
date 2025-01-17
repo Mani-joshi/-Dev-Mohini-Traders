@@ -1,0 +1,294 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+@font-face {
+    font-family: anek;
+    src: url(Anek-Devanagari-Regular.ttf);
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    /* background: #3498db; */
+}
+nav{
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #20264D;
+    position: relative;
+    height: 70px;
+
+}
+
+.logo{
+    color: white;
+}
+
+nav ul{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+nav ul li{
+    list-style-type: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+
+}
+.menu-items{
+    display: none;
+}
+.menu-items i{
+    color: white;
+    font-size: 30px;
+}
+@media (max-width:600px) {
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background: #20264D;
+        gap: 0;
+        overflow: hidden;
+    }
+    nav ul li{
+        padding: 20px;
+    }
+    .menu-items{
+        display: block;
+    }
+    #menulist{
+        transform: all 0.5s;
+    }
+    .upper-section{
+        /* border: 2px solid black; */
+        display: flex;
+    }
+    .left-section{
+        width: 55vw;
+        height: auto;
+        /* border: 2px solid black; */
+    }
+    .right-section{
+        /* border: 2px solid black; */
+        margin-left: 5px;
+        margin-top: 25px;
+    }
+    .product-img{
+        /* border: 2px solid black; */
+        width: 40vw;
+        height: auto;
+    }
+    .product-img img{
+        height: auto;
+        width: 50vw;
+    }
+    .product-buy-page-title{
+        height: auto;
+        display: flex;
+        justify-content: center;
+        width: 52vw;
+        /* border: 2px solid black; */
+        font-size: 3.9vw;
+        background-color: #FFAE00;
+        color: white;
+        margin-top: 4vw;
+        margin-left: 2vw;
+        border-radius: 5px;
+        align-items: center; 
+
+    }
+    .product-buy-page-title p{
+        font-family: anek;
+        font-style: normal;
+        padding: 3px;
+    }
+    .product-buy-page-price{
+        display: flex;
+        /* border: 2px solid black; */
+        font-family: anek;
+        align-items: baseline;
+        gap: 5px;
+        padding-top: 2vw;
+        padding-left: 2vw;
+    }
+    .price-detail{
+        font-size: 4vw;
+        color: red;
+        letter-spacing: -1.3px;
+    }
+    .GST-detail{
+        font-size: 2vw;
+    }
+    .note-section{
+        /* border: 2px solid black; */
+        font-family: anek;
+        font-size: 2vw;
+        color: #4C4C4C;
+        list-style: disc;
+        margin-top: 25px;
+        margin-left: 2vw;
+    }
+    .note-section ul{
+        margin-left: 4vw;
+    }
+    .note-section li{
+        padding-bottom: 4px;
+    }
+    .name{
+        display: flex;
+        align-items: baseline;
+        /* border: 2px solid black; */
+        font-family: anek;
+        font-size: 4vw;
+        line-height: 20px;
+        padding-left: 5px;
+        color: #FFAE00;
+    }
+    .name p{
+        margin-left: 5px;
+        font-size: 2.5vw;
+    }
+    .address-input input{
+        height: 75px;
+    }
+    input{
+        width: 40vw;
+        margin-left: 5px ;
+        box-sizing: border-box;
+        box-shadow: 0 0 5px grey;
+        border: none;
+        border-radius: 5px;
+        font-family: anek;
+        font-size: 13px;
+        padding-top: 5px;
+        padding-bottom: 2px;
+        line-height: 10px;
+        padding-left: 5px;
+        text-align: left;
+        color: #4C4C4C;
+        margin-bottom: 15px;
+    }
+    .lower-section{
+        /* border: 2px solid black; */
+        /* display: flex;
+        justify-content: center; */
+        margin-top: 25px;
+        /* flex-direction: column; */
+    }
+    .billing-section{
+        /* border: 2px solid black; */
+        width: 50vw;
+        height: auto;
+        background-color: beige;
+    }
+    .cost-display{
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
+    .order-through-whatsapp-section{
+        display: flex;
+        flex-direction: column;
+        /* border: 2px solid black; */
+        align-items: center;
+    }
+    .order-button{
+        /* border: 2px solid black; */
+        width: 80vw;
+        height: 10vw;
+        background-color: #56D260;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        border-radius: 5px;
+        gap: 1vw;
+        margin-bottom: 25px;
+        margin-top: 25px;
+    }
+    .call-button{
+        /* border: 2px solid black; */
+        border-radius: 5px;
+        display: block;
+        width: 80vw;
+        height: 10vw;
+        background-color: #20264D;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 25px;
+        gap: 5px;
+    }
+    .footer{
+        display: flex;
+        width: 100vw;
+        height: auto;
+        background-color: #20264D;
+        padding: 10px;
+        justify-content: center;
+        gap: 12.5vw;
+    }
+    .right-footer{
+        /* border: 2px solid black; */
+        height: auto;
+        width: 50vw;
+        padding-top: 10px;
+        font-family: anek;
+        font-size: 10px;
+        color: #FFAE00;
+        /* padding-top: 10px; */
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    .right-footer p{
+        /* background-color: #FFAE00; */
+        color: white;
+        width: fit-content;
+        padding-left: 5px;
+        padding-right: 5px;
+        line-height: 15px;
+    }
+    .call-icon{
+        display: flex;
+        gap: 10px;
+
+    }
+    .call-icon i{
+        color: #FFAE00;
+        padding-top: 5px;
+        padding-left: 5px;
+    }
+    .brief-summary{
+        color: white;
+        font-family: anek;
+        font-size: 2.5vw;
+        width: 150px;
+        line-height: 15px;
+    }
+    .loc-icon{
+        padding-left: 5px;
+        padding-top: 15px;
+        display: flex;
+        gap: 10px;
+        font-size: 12px;
+    }
+    .loc-icon-content p{
+        color: white;
+        width: fit-content;
+        font: anek;
+        font-size: 2.5vw;
+    }
+}
