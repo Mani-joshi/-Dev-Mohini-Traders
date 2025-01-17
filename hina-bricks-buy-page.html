@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Now</title>
+    <link rel="stylesheet" href="hina-bricks-buy-page.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="DEV_MOHINI_LOGO 1.png" alt="">
+        </div>
+        <ul id="menulist">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="">About</a></li>
+            <!-- <li><a href="">Product</a></li>
+            <li><a href="">Services</a></li> -->
+            <li><a href="">Contact</a></li>
+        </ul>
+        <div class="menu-items">
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+        </div>
+    </nav>
+    <div class="upper-section">
+        <div class="left-section">
+            <div class="product-img">
+                <img src="Hina-Bricks-pics.png" alt="">
+            </div>
+            <div class="product-buy-page-title">
+                <p>Hina Bricks (Grade-1) - 1000 pcs</p>
+            </div>
+            <div class="product-buy-page-price">
+                <p class="price-detail" id="Price">Rs. 6500</p>
+                <p class="GST-detail">(including GST)</h6>
+            </div>
+            <div class="note-section">
+                <p>Note:</p>
+                <ul>
+                    <li>Delivery is limited to haldwani</li>
+                    <li>We Promise 3 hour Delivery from the time of order placed</li>
+                    <li>Orders are based on Cash on Delivery, payment only after delivery</li>
+                    <li>Delivery will be free for first new customers</li>
+                    <li>Price will be discounted for repeat customers</li>
+                    <li>Orders will be placed after confirmation call</li>
+                    <li>small fee of Rs. 100 will be charged as delivery fee</li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="right-section">
+            <form action="">
+                <div class="name">
+                    Name:
+                </div>
+                <div class="name-input">
+                    <input type="text" id="name" required>
+                </div>
+                <div class="name">
+                    Phone no.:
+                </div>
+                <div class="name-input">
+                    <input type="text" id="phone" required>
+                </div>
+                <div class="name">
+                    Quantity: <p>(min.5)</p>
+                </div>
+                <div class="name-input">
+                    <input type="number" id="Quantity" required>
+                </div>
+                <div class="name">
+                    Address:
+                </div>
+                <div class="address-input">
+                    <input type="text" id="address" required>
+                </div>
+                <div class="name">
+                    Product Name:
+                </div>
+                <div class="name-input">
+                    <input type="text">
+                </div>
+                
+            </form>
+
+        </div>
+    </div>
+    <div class="lower-section">
+        <div class="delivery-cost-section">
+
+        </div>
+        <div class="final-cost-section">
+
+        </div>
+        </div>
+        <div class="order-through-whatsapp-section">
+            <div class="order-button" onclick="gotowhatsapp()">
+                <p>Order through whatsapp</p>
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div class="call-us-section">
+                <div class="call-button" id="call_button">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>+91 73519 23694</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="left-footer">
+            <div class="logo-footer">
+                <img src="DEV_MOHINI_LOGO 1.png" alt="">
+            </div>
+            <div class="brief-summary">
+                <p>For over 10 years, we have been a trusted partner in building your dream homes, providing top quality products</p>
+            </div>
+        </div>
+        <div class="right-footer">
+            <div class="call-icon">
+                <i class="fa-solid fa-phone"></i>
+                <div class="call-icon-content">
+                    <p>call us for best price</p>
+                    <p>+91 73519 23694</p>
+                </div>
+            </div>
+            <div class="loc-icon">
+                <i class="fa-solid fa-location-dot"></i>
+                <div class="loc-icon-content">
+                    <p>Malli Bamori, Laldanth road, near Primary school, Haldwani, Nainital, Uttarakhand - 263139</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        let menulist = document.getElementById("menulist")
+        menulist.style.maxHeight = "0px";
+
+        function toggleMenu(){
+            if(menulist.style.maxHeight == "0px")
+            {
+                menulist.style.maxHeight = "300px";
+            }
+            else{
+                menulist.style.maxHeight = "0px";
+            }
+        }
+
+        function temp(){
+            prompt("hello");
+        }
+
+        function gotowhatsapp() {
+            var name = document.getElementById("name").value;
+            var phone = document.getElementById("phone").value;
+            var Quantity = document.getElementById("Quantity").value;
+            var address = document.getElementById("address").value;
+
+            var url =
+              "https://wa.me/918193892504?text=" +
+              "Name: " +
+              name +
+              "%0a" +
+              "Phone: " +
+              phone +
+              "%0a" +
+              "Quantity: " +
+              Quantity +
+              "%0a" +
+              "address: " +
+              address;
+
+            window.open(url, "_blank");
+
+            var name = document.getElementById("name").value;
+          console.log(name);
+          var phone = document.getElementById("phone").value;
+          console.log(phone);
+          }
+
+        let callButton = document.getElementById("call_button");
+
+        let call = document.createElement('a');
+        call.href = 'tel:+917351923694';
+
+        callButton.appendChild(call);
+        console.log(document.getElementById("call_button").innerHTML)
+    </script>
+    <script src="https://kit.fontawesome.com/dc9793b3f9.js" crossorigin="anonymous"></script>
+</body>
+</html>
